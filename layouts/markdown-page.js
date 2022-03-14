@@ -12,7 +12,7 @@ const MarkdownPage = ({ document }) => {
   return (
     <>
       <Head>
-        <title>{`Transit | ${title}`}</title>
+        <title>{`Kevin's Apps | ${title}`}</title>
       </Head>
 
 

@@ -2,13 +2,55 @@
   "global": {},
   "header": {},
   "footer": {
-    "legal-doc": "Aviso Legal",
+    "support": "Soporte",
     "privacy-doc": "Política de Privacidad",
     "maker": "Con 💜 de"
   },
   "index": {
     "landingImg": "/img/marketing/es.placeholder.png",
     "landingAlt": ""
+  },
+  "support": {
+    "title": "Soporte",
+    "form": {
+      "global": {
+        "errors": {
+          "required": "Campo obligatorio"
+        }
+      },
+      "name": {
+        "label": "Tu nombre",
+        "placeholder": "Pepito Pérez",
+        "errors": {
+          "length": "El nombre introducido debe contener al menos 3 caracteres"
+        }
+      },
+      "email": {
+        "label": "Tu email",
+        "placeholder": "pepito.perez@ejemplo.org",
+        "errors": {
+          "valid": "La dirección de correo debe ser válida"
+        }
+      },
+      "app": {
+        "label": "¿Sobre qué aplicación quieres contactarnos?"
+      },
+      "message": {
+        "label": "Tu problema o sugerencia",
+        "placeholder": "",
+        "errors": {
+          "length": "El mensaje debe contener al menos 10 caracteres"
+        }
+      },
+      "privacy": {
+        "label": "He leído y acepto la",
+        "link": "Política de Privacidad"
+      },
+      "submit": {
+        "normal": "Enviar",
+        "loading": "Enviando"
+      }
+    }
   },
   "error": {
     "backText": "Volver atrás",

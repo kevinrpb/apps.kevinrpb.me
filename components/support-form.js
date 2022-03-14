@@ -10,6 +10,7 @@ import {
   Select,
   Button,
   Textarea,
+  Checkbox,
   Container,
   FormHelperText,
 } from '@chakra-ui/react'
@@ -17,6 +18,7 @@ import {
 import { useForm } from 'react-hook-form'
 
 import appsInfo from '@data/apps.json'
+import SaneLink from '@components/link'
 
 const SupportForm = () => {
   const { t } = useTranslation('common', { keyPrefix: 'support.form' })
@@ -34,7 +36,7 @@ const SupportForm = () => {
       app,
       messageLines: message.split('\n'),
       '_email.from': 'Transit Support Form',
-      '_email.subject': `[Transit] [${app}] New support message`
+      '_email.subject': `[Transit] [${app}] New support message`,
     }
 
     const responseData = await fetch(process.env.NEXT_PUBLIC_FORM_CONTACT_URL, {
@@ -118,6 +120,19 @@ const SupportForm = () => {
           })}
         />
         <FormErrorMessage>{errors.message && errors.message.message}</FormErrorMessage>
+      </FormControl>
+
+      <FormControl isInvalid={errors.privacy}>
+        <Checkbox
+          id='privacy'
+          placeholder='privacy'
+          {...register('privacy', {
+            required: t('global.errors.required'),
+          })}
+        >
+          {t('privacy.label')} <SaneLink href='/doc/privacy'>{t('privacy.link')}</SaneLink>
+        </Checkbox>
+        <FormErrorMessage>{errors.privacy && errors.privacy.message}</FormErrorMessage>
       </FormControl>
 
       <Button

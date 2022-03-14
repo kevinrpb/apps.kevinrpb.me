@@ -1,6 +1,11 @@
 import { extendTheme } from '@chakra-ui/react'
 
 const theme = extendTheme({
+  colors: {
+    semiGray: {
+      100: 'rgba(237, 242, 247, 0.8)'
+    }
+  },
   components: {
     Link: {
       baseStyle: {
@@ -43,6 +48,8 @@ const theme = extendTheme({
         right: '0',
         height: '5rem',
         padding: '1rem',
+        bg: 'semiGray.100',
+        backdropFilter: 'blur(50px)',
         h1: {
           fontSize: 'xl',
         },
@@ -67,6 +74,19 @@ const theme = extendTheme({
         '&[no-margin=true]': {
           marginTop: '0',
         },
+      },
+      article: {
+        'h1, h2, h3, h4, h5, h6': {
+          '&:not(:first-child)': {
+            marginTop: '1.5rem'
+          }
+        },
+        'p': {
+          marginTop: '1rem'
+        },
+        'ul': {
+          'padding-inline-start': '2rem'
+        }
       },
       footer: {
         padding: '1rem',

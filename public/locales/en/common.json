@@ -58,6 +58,10 @@
           "length": "The message should be at least 10 characters long"
         }
       },
+      "privacy": {
+        "label": "I have read and agree to the",
+        "link": "Privacy Policy"
+      },
       "submit": {
         "normal": "Submit",
         "loading": "Submitting"
