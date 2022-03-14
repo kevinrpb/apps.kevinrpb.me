@@ -16,6 +16,8 @@ import {
 
 import { useForm } from 'react-hook-form'
 
+import appsInfo from '@data/apps.json'
+
 const SupportForm = () => {
   const { t } = useTranslation('common', { keyPrefix: 'support.form' })
 
@@ -92,9 +94,15 @@ const SupportForm = () => {
             required: t('global.errors.required'),
           })}
         >
-          <option selected value='Cerc'>
-            Cerc
-          </option>
+          {/* TODO: Add this and validate  */}
+          {/* <option selected disabled key="none" value="none">
+            Select an app
+          </option> */}
+          {appsInfo.map(({ value, label }) => (
+            <option key={value} value={value}>
+              {label}
+            </option>
+          ))}
         </Select>
         <FormErrorMessage>{errors.app && errors.app.message}</FormErrorMessage>
       </FormControl>

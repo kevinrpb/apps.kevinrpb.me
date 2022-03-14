@@ -8,9 +8,11 @@ import { Heading } from '@chakra-ui/react'
 import { i18n } from '@/next-i18next.config.js'
 import LandingPage from '@layouts/landing-page'
 
+import appsInfo from '@data/apps.json'
+
 export async function getStaticPaths() {
   const { locales } = i18n
-  const apps = ['cerc', 'addite']
+  const apps = appsInfo.map(({ value }) => value)
 
   const paths = locales.flatMap((locale) => {
     return apps.map((path) => ({
