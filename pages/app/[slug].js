@@ -26,16 +26,18 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params, locale }) {
+  const app = params.slug
+
   return {
     props: {
-      app: params.slug,
-      ...(await serverSideTranslations(locale, ['common'])),
+      app,
+      ...(await serverSideTranslations(locale, ['common', app])),
     },
   }
 }
 
 const AppPage = ({ app }) => {
-  const { t } = useTranslation('common', { keyPrefix: `apps.${app}` })
+  const { t } = useTranslation(app)
 
   return (
     <LandingPage

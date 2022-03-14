@@ -10,12 +10,6 @@
     "landingImg": "/img/marketing/es.placeholder.png",
     "landingAlt": ""
   },
-  "apps": {
-    "Cerc": {
-      "landingImg": "/img/marketing/es.placeholder.png",
-      "landingAlt": ""
-    }
-  },
   "error": {
     "backText": "Volver atrás",
     "homeText": "Ir a la página de inicio",

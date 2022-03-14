@@ -64,20 +64,6 @@
       }
     }
   },
-  "apps": {
-    "cerc": {
-      "title": "Cerc",
-      "storeURL": "https://apps.apple.com/us/app/cerc/1585870877",
-      "landingImg": "/img/marketing/en.placeholder.png",
-      "landingAlt": ""
-    },
-    "addite": {
-      "title": "Addite",
-      "storeURL": "https://apps.apple.com/us/app/addite/",
-      "landingImg": "/img/marketing/en.placeholder.png",
-      "landingAlt": ""
-    }
-  },
   "error": {
     "backText": "Go back",
     "homeText": "Go to Home page",
