@@ -43,7 +43,7 @@ const AppPage = ({ app }) => {
 
   return (
     <LandingPage
-      title={`Transit | ${t('title')}`}
+      title={`Kevin's Apps | ${t('title')}`}
       imgSrc={t('landingImg')}
       imgAlt={t('landingAlt')}
       storeHref={t('storeURL')}

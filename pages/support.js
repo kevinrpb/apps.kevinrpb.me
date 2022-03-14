@@ -19,7 +19,7 @@ const Home = () => {
   const { t } = useTranslation('common', { keyPrefix: 'support' })
 
   return (
-    <DefaultPage title={`Transit | ${t('title')}`}>
+    <DefaultPage title={`Kevin's Apps | ${t('title')}`}>
       <Heading.h2>Support</Heading.h2>
 
       <SupportForm />
