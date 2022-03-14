@@ -1,0 +1,44 @@
+{
+  "name": "transit.kevinrpb.me",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
+    "lint": "next lint",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^1.7.4",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "framer-motion": "^5.5.7",
+    "next": "12.0.7",
+    "next-i18next": "^10.0.1",
+    "next-seo": "^4.28.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-hook-form": "^7.25.3",
+    "react-icons": "^4.3.1",
+    "rehype-react": "^7.0.3",
+    "remark-extract-frontmatter": "^3.2.0",
+    "remark-frontmatter": "^4.0.1",
+    "remark-gfm": "^3.0.1",
+    "remark-parse": "^10.0.1",
+    "remark-rehype": "^10.1.0",
+    "remark-stringify": "^10.0.2",
+    "sass": "^1.45.0",
+    "unified": "^10.1.1",
+    "yaml": "^1.10.2"
+  },
+  "devDependencies": {
+    "eslint": "8.5.0",
+    "eslint-config-next": "12.0.7",
+    "eslint-plugin-next": "^0.0.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.4"
+  }
+}

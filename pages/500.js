@@ -1,0 +1,37 @@
+import React from 'react'
+
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
+
+import DefaultPage from '@layouts/default-page'
+import heading from '@components/heading'
+import SaneLink from '@components/link'
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  }
+}
+
+const Error500Page = () => {
+  const { t } = useTranslation('common', { keyPrefix: 'error' })
+
+  return (
+    <DefaultPage title='Transit | 500'>
+      <heading.h2>{t('500.h2')}</heading.h2>
+
+      <p>{t('500.text')}</p>
+
+      <ul>
+        <li>
+          <SaneLink href='/'>{t('backText')}</SaneLink>
+          <SaneLink href='/'>{t('homeText')}</SaneLink>
+        </li>
+      </ul>
+    </DefaultPage>
+  )
+}
+
+export default Error500Page

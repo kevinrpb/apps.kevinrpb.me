@@ -1,0 +1,93 @@
+{
+  "global": {
+    "title": "Kevin's Apps"
+  },
+  "header": {
+    "h1": "Kevin's Apps",
+    "nav": [
+      {
+        "label": "Cerc",
+        "href": "/app/cerc",
+        "icon": "/img/icons/cerc-1024.png"
+      },
+      {
+        "label": "Addite",
+        "href": "/app/addite",
+        "icon": "/img/icons/addite-1024.png"
+      }
+    ]
+  },
+  "footer": {
+    "support": "Support",
+    "privacy-doc": "Privacy Notice",
+    "maker": "With 💜 from"
+  },
+  "index": {
+    "landingImg": "/img/marketing/en.placeholder.png",
+    "landingAlt": ""
+  },
+  "support": {
+    "title": "Support",
+    "form": {
+      "global": {
+        "errors": {
+          "required": "This field is required"
+        }
+      },
+      "name": {
+        "label": "Your name",
+        "placeholder": "John Smith",
+        "errors": {
+          "length": "Name should be at least 3 characters long"
+        }
+      },
+      "email": {
+        "label": "Your email",
+        "placeholder": "john.smith@example.org",
+        "errors": {
+          "valid": "It should be a valid email address"
+        }
+      },
+      "app": {
+        "label": "Which app do you need help with?"
+      },
+      "message": {
+        "label": "Your issue or feedback",
+        "placeholder": "",
+        "errors": {
+          "length": "The message should be at least 10 characters long"
+        }
+      },
+      "submit": {
+        "normal": "Submit",
+        "loading": "Submitting"
+      }
+    }
+  },
+  "apps": {
+    "cerc": {
+      "title": "Cerc",
+      "storeURL": "https://apps.apple.com/us/app/cerc/1585870877",
+      "landingImg": "/img/marketing/en.placeholder.png",
+      "landingAlt": ""
+    },
+    "addite": {
+      "title": "Addite",
+      "storeURL": "https://apps.apple.com/us/app/addite/",
+      "landingImg": "/img/marketing/en.placeholder.png",
+      "landingAlt": ""
+    }
+  },
+  "error": {
+    "backText": "Go back",
+    "homeText": "Go to Home page",
+    "404": {
+      "h2": "404 Error",
+      "text": "Oops! We couldn't find this page. You can:"
+    },
+    "500": {
+      "h2": "500 Error",
+      "text": "There was an internal error... You can:"
+    }
+  }
+}
