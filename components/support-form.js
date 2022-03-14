@@ -20,7 +20,7 @@ import { useForm } from 'react-hook-form'
 import appsInfo from '@data/apps.json'
 import SaneLink from '@components/link'
 
-const SupportForm = () => {
+const SupportForm = (props) => {
   const { t } = useTranslation('common', { keyPrefix: 'support.form' })
 
   const {
@@ -56,7 +56,7 @@ const SupportForm = () => {
   }
 
   return (
-    <Container as='form' onSubmit={handleSubmit(onSubmit, onError)}>
+    <Container as='form' onSubmit={handleSubmit(onSubmit, onError)} {...props}>
       <FormControl isInvalid={errors.name}>
         <FormLabel htmlFor='name'>{t('name.label')}</FormLabel>
         <Input

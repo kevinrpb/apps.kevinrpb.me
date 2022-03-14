@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Image from 'next/image'
 
-import { Flex } from '@chakra-ui/react'
+import { Container, Flex } from '@chakra-ui/react'
 
 import SaneLink from '@components/link'
 
@@ -19,7 +19,7 @@ const LandingPage = ({ title, imgSrc, imgAlt, storeHref, children }) => {
       </Head>
 
       <Flex as='aside' className='landing' direction='column' flex='1'>
-        <Image src={imgSrc} alt={imgAlt} width='1920px' height='700px' />
+        <Image src={imgSrc} alt={imgAlt} width='1920px' height='700px' priority='true' />
 
         {storeHref && (
           <SaneLink href={storeHref} className='store'>
@@ -28,9 +28,11 @@ const LandingPage = ({ title, imgSrc, imgAlt, storeHref, children }) => {
         )}
       </Flex>
 
-      <Flex as='main' direction='column' flex='1' no-margin='true'>
-        {children}
-      </Flex>
+      <Container flex="1" maxW='container.lg'>
+        <Flex as='main' direction='column' flex='1' no-margin='true'>
+          {children}
+        </Flex>
+      </Container>
     </>
   )
 }

@@ -3,8 +3,8 @@ import { extendTheme } from '@chakra-ui/react'
 const theme = extendTheme({
   colors: {
     semiGray: {
-      100: 'rgba(237, 242, 247, 0.8)'
-    }
+      100: 'rgba(237, 242, 247, 0.8)',
+    },
   },
   components: {
     Link: {
@@ -16,7 +16,7 @@ const theme = extendTheme({
           padding: '0.5rem',
           // borderWidth: '1px',
           // borderColor: 'gray.400',
-          borderRadius: '10px',
+          borderRadius: `${(10 / 57) * 2}rem`,
           bg: 'gray.100',
           boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
           '&:focus, &:hover': {
@@ -64,7 +64,7 @@ const theme = extendTheme({
             },
             '&:not(:first-of-type)': {
               marginLeft: '0.5rem',
-            }
+            },
           },
         },
       },
@@ -74,19 +74,23 @@ const theme = extendTheme({
         '&[no-margin=true]': {
           marginTop: '0',
         },
+        img: {
+          borderRadius: `${(10 / 57) * 5}em`,
+        },
       },
       article: {
         'h1, h2, h3, h4, h5, h6': {
           '&:not(:first-child)': {
-            marginTop: '1.5rem'
-          }
+            marginTop: '1.5rem',
+          },
         },
-        'p': {
-          marginTop: '1rem'
+        p: {
+          marginTop: '1rem',
+          textAlign: 'justify',
         },
-        'ul': {
-          'padding-inline-start': '2rem'
-        }
+        ul: {
+          'padding-inline-start': '2rem',
+        },
       },
       footer: {
         padding: '1rem',
@@ -97,15 +101,15 @@ const theme = extendTheme({
         zIndex: '100',
         width: '100%',
         // height: '700px',
-        '> *' : {
-          flex: '1'
+        '> *': {
+          flex: '1',
         },
-        'span': {
+        span: {
           display: 'block',
           width: '1920px',
           // height: '700px',
         },
-        'img': {
+        img: {
           display: 'block',
           width: '1920px',
           // height: '700px',
@@ -117,16 +121,16 @@ const theme = extendTheme({
           position: 'absolute',
           left: '50%',
           bottom: '1rem',
-          transform: 'translateX(-50%)'
-        }
+          transform: 'translateX(-50%)',
+        },
       },
       form: {
         'div[role=group]': {
           '&:not(:first-of-type)': {
-            marginTop: '1rem'
-          }
-        }
-      }
+            marginTop: '1rem',
+          },
+        },
+      },
     }),
   },
 })

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Head from 'next/head'
-import { Flex } from '@chakra-ui/react'
+import { Container, Flex } from '@chakra-ui/react'
 
 const DefaultPage = ({ title, children }) => (
   <>
@@ -9,9 +9,11 @@ const DefaultPage = ({ title, children }) => (
       <title>{title}</title>
     </Head>
 
-    <Flex as="main" direction="column" flex="1">
-      {children}
-    </Flex>
+    <Container flex="1" maxW='container.lg'>
+      <Flex as="main" direction="column" flex="1">
+        {children}
+      </Flex>
+    </Container>
   </>
 )
 

@@ -20,9 +20,9 @@ const Home = () => {
 
   return (
     <DefaultPage title={`Kevin's Apps | ${t('title')}`}>
-      <Heading.h2>Support</Heading.h2>
+      <Heading.h1>Support</Heading.h1>
 
-      <SupportForm />
+      <SupportForm marginTop='2rem' />
     </DefaultPage>
   )
 }
